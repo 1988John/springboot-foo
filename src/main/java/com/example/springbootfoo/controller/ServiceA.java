@@ -10,5 +10,6 @@ public class ServiceA {
         list.addAll(null);
         System.out.println(list);
         System.out.println("这里是建了workf分支后加入的内容----");
+        System.out.println("main - mywork -1 -- 2");
     }
 }
