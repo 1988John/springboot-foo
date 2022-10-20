@@ -1,0 +1,18 @@
+# .codebase/pipelines/ci.yaml
+name: sonar analysis
+trigger:
+  change:  # 配置mr,submit的触发方式
+    branches: work1
+    notification:
+      when: [ failure ]  # 通知类型(失败）·
+jobs:
+  sonar: # 定义sonar配置job
+    name: sonar analysis
+    image: hub.byted.org/codebase/ci_java8:latest   # 针对java的镜像，Go的镜像hub.byted.org/codebase/ci_go_1_15:latest
+    steps:
+      - id: sonar
+        uses: actions/sonar@v1 # 用sonar action
+        inputs:
+          disable_quality_gates: false   # 使用卡点功能
+          gate: ies_kefu_stability_gate  # 针对卡点使用配置的质量阈(客服平台统一质量阈）
+          exclusions_list: [ "stability-report-spi/target/**","stability-report-thrift-service/target/**" ] # 排除不扫描的文件（用户根据项目自己配置）
