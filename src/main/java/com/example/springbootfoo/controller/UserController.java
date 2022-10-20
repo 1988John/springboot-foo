@@ -22,6 +22,7 @@ public class UserController {
     @Autowired
     private ConnectionSettings connectionSettings;
 
+
     @Autowired
     private ServiceA serviceA;
 
