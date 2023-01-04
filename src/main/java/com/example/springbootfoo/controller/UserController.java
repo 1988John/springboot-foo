@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+
 /**
  * @author jiangwang
  * @date  2018/5/14
@@ -32,5 +34,17 @@ public class UserController {
         System.out.println("mywork--1");
         return "myValue" + connectionSettings.getUsername();
     }
+
+    public static void main(String[] args) {
+        float v = 0.1f;
+        cal(String.valueOf(v));
+    }
+
+    private static void cal(String f) {
+        BigDecimal bd = new BigDecimal(f);
+        BigDecimal bigDecimal = new BigDecimal("0.1");
+        System.out.println(bd.compareTo(bigDecimal));
+    }
+
 
 }
