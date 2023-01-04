@@ -44,6 +44,7 @@ public class UserController {
 
     private static void cal(String f) {
         BigDecimal bd = new BigDecimal(f);
+        System.out.println("mywork--主分支上1111111");
         BigDecimal bigDecimal = new BigDecimal("0.1");
         System.out.println(bd.compareTo(bigDecimal));
     }
