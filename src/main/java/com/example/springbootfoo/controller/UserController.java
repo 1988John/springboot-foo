@@ -32,6 +32,7 @@ public class UserController {
     public  String value(){
         logger.info("中文");
         System.out.println("mywork--1");
+        System.out.println("mywork--主分支上");
         return "myValue" + connectionSettings.getUsername();
     }
 
