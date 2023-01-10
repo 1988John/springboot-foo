@@ -28,6 +28,7 @@ public class UserController {
     @GetMapping(value = "/value")
     public  String value(){
         logger.info("中文");
+        System.out.println("work分支提交-t1");
         return "myValue" + connectionSettings.getUsername();
     }
 
