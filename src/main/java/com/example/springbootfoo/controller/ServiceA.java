@@ -12,5 +12,6 @@ public class ServiceA {
         System.out.println("这里是建了workf分支后加入的内容----");
         System.out.println("main - mywork -1 -- 2");
         System.out.println("main 分支提交-t2");
+        System.out.println("main 分支提交-t3");
     }
 }
